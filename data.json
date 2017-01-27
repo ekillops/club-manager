@@ -1,0 +1,29 @@
+{
+  "club-members" : [
+    {
+      "firstName": "Bobby",
+      "lastName": "Newmark",
+      "fullName": "Bobby Newmark",
+      "phoneNumber": "503-123-4567"
+    },
+    {
+      "firstName": "Peter",
+      "lastName": "Riviera",
+      "fullName": "Peter Riviera",
+      "phoneNumber": "503-234-5678"
+    },
+    {
+      "firstName": "Molly",
+      "lastName": "Millions",
+      "fullName": "Molly Millions",
+      "phoneNumber": "503-987-6543"
+    },
+    {
+      "firstName": "Henry",
+      "lastName": "Case",
+      "fullName": "Henry Case",
+      "phoneNumber": "503-321-7654"
+    }
+  ]
+
+}
