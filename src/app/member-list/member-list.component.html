@@ -6,9 +6,9 @@
       <div class="thumbnail">
       <img src="../../assets/img/profile.jpg" alt="Profile Pic">
       <div class="caption">
-        <h3>{{member.fullName}}</h3>
+        <h4>{{member.fullName}}</h4>
         <p>Phone Number: {{member.phoneNumber}}</p>
-        <p><a [routerLink]="[member.$key]" class="btn btn-primary" role="button">View Profile</a></p>
+        <p><button class="btn btn-primary" (click)="viewMemberPage(member.$key)">View Profile</button></p>
       </div>
     </div>
     </div>
