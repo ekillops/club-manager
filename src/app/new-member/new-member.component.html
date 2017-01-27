@@ -1,3 +1,15 @@
-<p>
-  new-member works!
-</p>
+<h3>Become a Member</h3>
+<div class="well">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input class="form-control" #newFirstName placeholder="First">
+    <input class="form-control" #newLastName placeholder="Last">
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone Number</label>
+    <input pattern="\d{3}[\-]\d{3}[\-]\d{4}" class="form-control" placeholder="000-000-0000" #newPhone>
+  </div>
+
+  <button class="btn btn-primary" (click)="createMember(newFirstName.value, newLastName.value, newPhone.value); newFirstName.value=''; newLastName.value=''; newPhone.value='';">Create Account</button>
+</div>

@@ -21,12 +21,12 @@ const appRoutes = [
     component: MemberListComponent
   },
   {
-    path: 'members/:id',
-    component: MemberProfileComponent
-  },
-  {
     path: 'members/new',
     component: NewMemberComponent
+  },
+  {
+    path: 'members/:id',
+    component: MemberProfileComponent
   }
 ];
 
