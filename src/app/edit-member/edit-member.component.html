@@ -1,0 +1,16 @@
+<h3>Edit Member</h3>
+
+<div class="well">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input class="form-control" #updateFirst [value]="(currentMember)?.firstName" >
+    <input class="form-control" #updateLast [value]="(currentMember)?.lastName" >
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone Number</label>
+    <input class="form-control" #updatePhone pattern="\d{3}[\-]\d{3}[\-]\d{4}" [value]="(currentMember)?.phoneNumber">
+  </div>
+
+  <button class="btn btn-primary" (click)="updateMember(updateFirst.value, updateLast.value, updatePhone.value)">Update</button>
+</div>

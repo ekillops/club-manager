@@ -23,4 +23,12 @@ export class MemberService {
     this.members.push(newMember);
   }
 
+  updateMember(editedMember: Member): void {
+    let memberObservable: FirebaseObjectObservable<any> = this.getMemberById(editedMember.id);
+    memberObservable.update(editedMember);
+  }
+
+  deleteMember(targetMember: FirebaseObjectObservable<any>): void {
+    targetMember.remove();
+  }
 }

@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { MemberListComponent } from './member-list/member-list.component';
 import { MemberProfileComponent } from './member-profile/member-profile.component';
 import { NewMemberComponent } from './new-member/new-member.component';
+import { EditMemberComponent } from './edit-member/edit-member.component';
 
 
 const appRoutes = [
@@ -27,6 +28,10 @@ const appRoutes = [
   {
     path: 'members/:id',
     component: MemberProfileComponent
+  },
+  {
+    path: 'members/:id/edit',
+    component: EditMemberComponent
   }
 ];
 
