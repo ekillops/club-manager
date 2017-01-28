@@ -1,31 +1,31 @@
-# ClubManager
+# _Marcus Garvey Star Liners_
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
+#### _Angular App, 1/27/2017_
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### By _**Erik Killops**_
 
-## Code scaffolding
+## Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+_A website for a frequent flyer program for the fictional tug Marcus Garvey from William Gibson's classic cyberpunk novel Neuromancer_
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Setup/Installation Requirements
 
-## Running unit tests
+1. Clone repository.
+2. Navigate to project directory.
+3. From a command line run `$ npm install` and `bower install`
+4. Create or login to a Firebase account and create a project
+5. Visit that project in the Firebase console and hit 'Add Firebase to your Web App' and copy to the values to 'api-keys-example.ts' and rename it to 'api-keys.ts'
+6. From the database section of the Firebase project import 'data.json' to seed it with values
+7. Start development server by running `$ ng serve` and visit http://localhost:4200
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Technologies Used
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+Javascript, TypeScript, AngularJs, Bootstrap, Firebase
 
-## Deploying to GitHub Pages
+### License
 
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
+*MIT*
 
-## Further help
-
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Copyright (c) 2017 **_Erik Killops, Epicodus_**
