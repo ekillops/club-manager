@@ -16,6 +16,7 @@ export class EditMemberComponent implements OnInit {
 
   currentMemberId: string;
   currentMember: Member;
+  selectedLevel: string = 'GREEN';
 
   constructor(
     private router: Router,
@@ -34,8 +35,13 @@ export class EditMemberComponent implements OnInit {
   }
 
   updateMember(newFirstName: string, newLastName: string, newPhone: string): void {
-    let editedMember: Member = new Member(newFirstName, newLastName, newPhone, this.currentMemberId);
+    let editedMember: Member = new Member(newFirstName, newLastName, newPhone, this.selectedLevel, this.currentMemberId);
     this.memberService.updateMember(editedMember);
     this.router.navigate(['members/' + this.currentMemberId]);
+  }
+
+  setLevel(inputLevel: string): void {
+    console.log(inputLevel);
+    this.selectedLevel = inputLevel;
   }
 }

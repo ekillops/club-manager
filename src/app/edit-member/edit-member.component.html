@@ -12,5 +12,14 @@
     <input class="form-control" #updatePhone pattern="\d{3}[\-]\d{3}[\-]\d{4}" [value]="(currentMember)?.phoneNumber">
   </div>
 
+<div class="form-group">
+  <label>Membership Level</label>
+  <select class="form-control" (change)="setLevel($event.target.value)">
+    <option value="GREEN" selected>Green</option>
+    <option value="RED">Red</option>
+    <option value="GOLD">Gold</option>
+  </select>
+</div>
+
   <button class="btn btn-primary" (click)="updateMember(updateFirst.value, updateLast.value, updatePhone.value)">Update</button>
 </div>

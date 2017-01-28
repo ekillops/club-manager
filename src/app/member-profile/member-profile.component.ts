@@ -15,7 +15,7 @@ import { FirebaseObjectObservable } from 'angularfire2';
 export class MemberProfileComponent implements OnInit {
 
   currentMemberId: string;
-  currentMember: FirebaseObjectObservable<any>;
+  currentMember: Member;
 
   constructor(
     private router: Router,
@@ -28,12 +28,26 @@ export class MemberProfileComponent implements OnInit {
     this.route.params.forEach((urlParametersArray) => {
       this.currentMemberId = urlParametersArray['id'];
     });
-    this.currentMember = this.memberService.getMemberById(this.currentMemberId);
+    this.memberService.getMemberById(this.currentMemberId).subscribe((memberObservable) => {
+      this.currentMember = new Member(memberObservable.firstName, memberObservable.lastName, memberObservable.phoneNumber, memberObservable.level,  memberObservable.id);
+    });
   }
 
   deleteMember(): void {
-    this.memberService.deleteMember(this.currentMember);
+    this.memberService.deleteMember(this.currentMember.id);
     this.router.navigate(['members']);
+  }
+
+  memberLabelColor(memberLevel: string): string {
+    if (memberLevel === 'GREEN') {
+      return 'label label-success';
+    } else if (memberLevel === 'RED') {
+      return 'label label-danger';
+    } else if (memberLevel === 'GOLD') {
+      return 'label label-warning';
+    } else {
+      return 'label label-success';
+    }
   }
 
 }

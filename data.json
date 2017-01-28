@@ -4,25 +4,43 @@
       "firstName": "Bobby",
       "lastName": "Newmark",
       "fullName": "Bobby Newmark",
-      "phoneNumber": "503-123-4567"
+      "phoneNumber": "503-123-4567",
+      "level": "GREEN"
     },
     {
       "firstName": "Peter",
       "lastName": "Riviera",
       "fullName": "Peter Riviera",
-      "phoneNumber": "503-234-5678"
+      "phoneNumber": "503-234-5678",
+      "level": "GREEN"
     },
     {
       "firstName": "Molly",
       "lastName": "Millions",
       "fullName": "Molly Millions",
-      "phoneNumber": "503-987-6543"
+      "phoneNumber": "503-987-6543",
+      "level": "RED"
     },
     {
       "firstName": "Henry",
       "lastName": "Case",
       "fullName": "Henry Case",
-      "phoneNumber": "503-321-7654"
+      "phoneNumber": "503-321-7654",
+      "level": "RED"
+    },
+    {
+      "firstName": "3Jane",
+      "lastName": "Tessier-Ashpool",
+      "fullName": "3Jane Tessier-Ashpool",
+      "phoneNumber": "503-087-3542",
+      "level": "GOLD"
+    },
+    {
+      "firstName": "Josef",
+      "lastName": "Virek",
+      "fullName": "Josef Virek",
+      "phoneNumber": "503-253-4830",
+      "level": "GOLD"
     }
   ]
 

@@ -12,6 +12,8 @@ import { MemberService } from '../services/member.service';
 
 export class NewMemberComponent implements OnInit {
 
+  selectedLevel: string = 'GREEN';
+
   constructor(private router: Router, private memberService: MemberService) { }
 
   ngOnInit() {
@@ -19,10 +21,14 @@ export class NewMemberComponent implements OnInit {
   }
 
   createMember(inputFirstName: string, inputLastName: string, inputPhone: string): void {
-    let newMember: Member = new Member(inputFirstName, inputLastName, inputPhone);
+    let newMember: Member = new Member(inputFirstName, inputLastName, inputPhone, this.selectedLevel);
 
     this.memberService.addMember(newMember);
 
     this.router.navigate(['members']);
+  }
+
+  setLevel(inputLevel: string): void {
+    this.selectedLevel = inputLevel;
   }
 }

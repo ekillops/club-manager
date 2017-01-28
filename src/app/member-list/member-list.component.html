@@ -1,14 +1,23 @@
 <h3>Our Members</h3>
 <br><br>
+<div class="form-group">
+  <label>Show:</label>
+  <select class="form-control" (change)="changeFilter($event.target.value)">
+    <option value="ALL" selected>All Members</option>
+    <option value="GREEN">Green Members</option>
+    <option value="RED">Red Members</option>
+    <option value="GOLD">Gold Members</option>
+  </select>
+</div>
 <div class="row">
-  <div *ngFor="let member of members | async">
+  <div *ngFor="let member of members | async | memberLevel:filter">
     <div class="col-md-3 col-xs-6">
       <div class="thumbnail">
       <img src="../../assets/img/profile.jpg" alt="Profile Pic">
       <div class="caption">
-        <h4>{{member.fullName}}</h4>
+        <h4>{{member.fullName}} <span [class]="memberLabelColor(member.level)">{{member.level}}</span></h4>
         <p>Phone Number: {{member.phoneNumber}}</p>
-        <p><button class="btn btn-primary" (click)="viewMemberPage(member.$key)">View Profile</button></p>
+        <button class="btn btn-primary" (click)="viewMemberPage(member.$key)">View Profile</button>
       </div>
     </div>
     </div>

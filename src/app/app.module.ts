@@ -12,6 +12,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { NewMemberComponent } from './new-member/new-member.component';
 import { MemberProfileComponent } from './member-profile/member-profile.component';
 import { EditMemberComponent } from './edit-member/edit-member.component';
+import { MemberLevelPipe } from './pipes/member-level.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -28,7 +29,8 @@ export const firebaseConfig = {
     WelcomeComponent,
     NewMemberComponent,
     MemberProfileComponent,
-    EditMemberComponent
+    EditMemberComponent,
+    MemberLevelPipe
   ],
   imports: [
     BrowserModule,

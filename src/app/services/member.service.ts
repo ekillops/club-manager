@@ -28,7 +28,8 @@ export class MemberService {
     memberObservable.update(editedMember);
   }
 
-  deleteMember(targetMember: FirebaseObjectObservable<any>): void {
+  deleteMember(targetMemberId: string): void {
+    let targetMember = this.getMemberById(targetMemberId);
     targetMember.remove();
   }
 }
